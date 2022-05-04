@@ -1,15 +1,15 @@
 import React from 'react'
-import { createMyComponent } from '../../../../component'
-import { MyComponentOptions, MyComponent } from '../../../../component/types'
+import { createPaginator } from '../../../../component'
+import { PaginatorOptions, Paginator } from '../../../../component/types'
 import Com from './base'
 
 /**
- * Thin wrapper around the MyComponent component
+ * Thin wrapper around the Paginator component
  */
-export const render = (props: { options: MyComponentOptions, setComponent?: (component: MyComponent) => void }) => (
+export const render = (props: { options: PaginatorOptions, setComponent?: (component: Paginator) => void }) => (
   <Com
     componentOptions={props.options}
-    createComponent={createMyComponent}
+    createComponent={createPaginator}
     setComponent={props.setComponent}
     name="component"
   />

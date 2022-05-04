@@ -1,8 +1,45 @@
-// This is the entrypoint scss file for styling the component.
+@import '~@samhuk/select/src/component/styles/index.scss';
+@import '~@samhuk/number-input/src/component/styles/index.scss';
 
-.com-my-component {
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  background-color: #eee;
-  padding: 5px;
+.com-paginator {
+  display: flex;
+  flex-wrap: wrap;
+
+  .com-paginator__page-size-select {
+    width: 160px;
+    margin-right: 20px;
+  }
+
+  .com-paginator__page-nav {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+
+    .com-number-input {
+      max-width: 120px;
+    }
+
+    .divider {
+      margin-left: 5px;
+      margin-right: 5px;
+    }
+  }
+
+  .com-paginator__page-change-buttons {
+    margin-right: 15px;
+
+    button {
+      height: 100%;
+      margin-right: 10px;
+    }
+  }
+
+  .com-paginator__item-range {
+    display: flex;
+    align-items: center;
+
+    &>* {
+      margin-right: 5px;
+    }
+  }
 }

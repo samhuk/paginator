@@ -1,18 +1,21 @@
 import React from 'react'
-import { MyComponentOptions, MyComponent } from '../../../component/types'
-import MyComponentWithReact from '../common/generic/myComponent'
+import { PaginatorOptions, Paginator } from '../../../component/types'
+import PaginatorWithReact from '../common/generic/myComponent'
 import ItemBase from './itemBase'
 
-const COMPONENT_OPTIONS: MyComponentOptions = {
-  initialText: 'Hello, World!'
+const COMPONENT_OPTIONS: PaginatorOptions = {
+  page: 1,
+  itemCount: 50,
+  pageSize: 10,
+  pageSizeOptions: [5, 10, 20, 50, 100, 200, 500],
 }
 
-const Operations = (props: { component: MyComponent }) => (
+const Operations = (props: { component: Paginator }) => (
   <>
     <button
       type="button"
       className="button--white"
-      onClick={() => props.component.updateText('New text!')}
+      onClick={() => props.component.setPage(props.component.page + 1)}
     >
       Update the text of the component
     </button>
@@ -20,7 +23,7 @@ const Operations = (props: { component: MyComponent }) => (
 )
 
 export const render = () => (
-  <ItemBase component={MyComponentWithReact} componentOptions={COMPONENT_OPTIONS} operationsComponent={Operations} />
+  <ItemBase component={PaginatorWithReact} componentOptions={COMPONENT_OPTIONS} operationsComponent={Operations} />
 )
 
 export default render
