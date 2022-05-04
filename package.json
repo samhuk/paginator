@@ -1,6 +1,6 @@
 {
   "name": "@samhuk/paginator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vanilla JS paginator UI component",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
